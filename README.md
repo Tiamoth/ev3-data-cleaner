@@ -13,9 +13,12 @@ This repository contains the Python script to fix the data, as well as the origi
 ### 1. The EV3 Logic
 In the provided `.ev3` file, you will see two key steps:
 * **File Cleanup:** A `File Access` block is used to *delete* the old `Pdata` file before the main loop starts. This ensures we don't accidentally append new test data to an old run.
-  *(Insert image_cff7e5.png here)*
+
+![File Access Delete](File_Access_Delete.png)
+  
 * **Data Merging:** Inside the loop, the Error and Turn math blocks are wired into a `Text - Merge` block (separated by a comma), which feeds directly into the `File Access` write block.
-  *(Image_P_csv.png)*
+
+![File Access Merge](File_Access_Merge.png)
 
 ### 2. Log the Data
 Run the robot on the track for a short distance to capture a few corners, then stop the program. Extract the logged `.rtf` file using the EV3 Memory Browser and save it to your PC as a `.txt` file (e.g., `Pdata.txt`).
@@ -32,7 +35,6 @@ Open the new `.csv` file in Excel. The data will be perfectly split into "Error"
 
 ## Results
 Below is the final line graph generated in Excel using the cleaned CSV data. It clearly visualizes the physical oscillation (hunting) of the P-controller.
-the P-controller.
 
 ![P Controller Graph](Image_P_csv.png)
 
