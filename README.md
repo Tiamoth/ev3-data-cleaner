@@ -32,7 +32,7 @@ Open the new `.csv` file in Excel. The data will be perfectly split into "Error"
 
 ## Results
 Below is the final line graph generated in Excel using the cleaned CSV data. It clearly visualizes the physical oscillation (hunting) of the P-controller.
-*(Insert your Excel Line Graph image here)*
+*(Image_P_csv.png)*
 
 ## Example Data
 **Raw EV3 Output (`Pdata.txt`):**
