@@ -15,16 +15,16 @@ In the provided `.ev3` file, you will see two key steps:
 * **File Cleanup:** A `File Access` block is used to *delete* the old `Pdata` file before the main loop starts. This ensures we don't accidentally append new test data to an old run.
   *(Insert image_cff7e5.png here)*
 * **Data Merging:** Inside the loop, the Error and Turn math blocks are wired into a `Text - Merge` block (separated by a comma), which feeds directly into the `File Access` write block.
-  *(Insert image_cff83c.png here)*
+  *(Image_P_csv.png)*
 
 ### 2. Log the Data
 Run the robot on the track for a short distance to capture a few corners, then stop the program. Extract the logged `.rtf` file using the EV3 Memory Browser and save it to your PC as a `.txt` file (e.g., `Pdata.txt`).
 
 ### 3. Run the Script
-Place `clean_p_data.py` into the same folder as your text file and run it. The script uses Regex to automatically fix the squashed numbers, swap the decimals, and produce a clean `.csv` file.
+Place `P_Controller_Cleaner.py` into the same folder as your text file and run it. The script uses Regex to automatically fix the squashed numbers, swap the decimals, and produce a clean `.csv` file.
 
 ```bash
-python clean_p_data.py
+P_Controller_Cleaner.py
 ```
 
 ### 4. Graph in Excel
